@@ -6,11 +6,11 @@
 }
 .main-container{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3.5fr 1.5fr;
 }
 
 .activities-container{
-    margin: 0 8rem;
+    margin: 0 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;

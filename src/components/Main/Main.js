@@ -24,6 +24,7 @@ const Main = () => {
                         activities.map(activity =><Activity
                         key={activity.id}
                         activity={activity}
+                        handleAddToList={handleAddToList}
                         ></Activity>)
                     }
                 </div>

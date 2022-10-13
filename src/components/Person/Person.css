@@ -1,0 +1,89 @@
+.person{
+    position: sticky;
+    top: 0;
+    padding: 0.5rem 0.5rem;
+}
+.person-details{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.person-details img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+.person-info{
+    margin: 0 0.5rem;
+}
+.person-info h6, p{
+    margin: 0;
+}
+.physical-info{
+    background-color: rgba(195, 220, 245, 0.3);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+.weight h4, h6{
+    margin: 0;
+}
+.height h4, h6{
+    margin: 0;
+}
+.age h4, h6{
+    margin: 0;
+}
+.break-container{
+    margin: 0.5rem 0;
+}
+.break{
+    background-color: rgba(195, 220, 245, 0.3);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+.break button{
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+}
+.exercise-container{
+    margin: 0.5rem 0;
+}
+.exercise-time{
+    background-color: rgba(195, 220, 245, 0.3);
+    border-radius: 0.5rem;
+}
+.exercise-total{
+    display: flex;
+    justify-content: space-around;
+}
+.break-time{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(195, 220, 245, 0.3);
+    border-radius: 0.5rem;
+}
+.break-total{
+    display: flex;
+    justify-content: space-around;
+}
+.exercise-container button{
+    background-color: #3087f2;
+    width:90%;
+    border: none;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+}
+.exercise-container button:hover{
+    background-color: aqua;
+}
+.btn-text{
+    color: white;
+    margin: 0.5rem;
+}

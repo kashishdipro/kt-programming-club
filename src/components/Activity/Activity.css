@@ -3,7 +3,6 @@
     height: 30rem;
     background-color: white;
     border-radius: 0.5rem;
-    position: relative;
 }
 .activity img{
     width: 18rem;
@@ -20,13 +19,14 @@
 .activity-container button{
     background-color: #3087f2;
     width:90%;
-    position: absolute;
-    bottom: 0;
     border: none;
+    margin-top: 3rem;
     border-radius: 0.5rem;
+}
+.activity-container button:hover{
+    background-color: aqua;
 }
 .btn-text{
     color: white;
     margin: 0.5rem;
-    
 }
