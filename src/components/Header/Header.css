@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    align-items: center;
+}
+.header img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+.header h1{
+    color:#6076c6;
+    font-size: 1.5rem;
+}

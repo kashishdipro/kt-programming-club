@@ -1,0 +1,32 @@
+.activity{
+    width: 19rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    position: relative;
+}
+.activity img{
+    width: 18rem;
+    height: 16rem;
+    border-radius: .5rem;
+    margin: 0.5rem;
+}
+.activity-container{
+    padding: 1rem;
+}
+.activity-container h5{
+    margin: 0;
+}
+.activity-container button{
+    background-color: #3087f2;
+    width:90%;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-radius: 0.5rem;
+}
+.btn-text{
+    color: white;
+    margin: 0.5rem;
+    
+}

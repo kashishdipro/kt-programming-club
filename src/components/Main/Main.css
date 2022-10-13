@@ -1,0 +1,21 @@
+.main{
+    background-color: rgba(195, 220, 245, 0.3);
+}
+.header-container{
+    padding: 4rem 8rem;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.activities-container{
+    margin: 0 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.person-activity-container{
+    background-color: white;
+}
