@@ -6,12 +6,19 @@ import './Main.css'
 
 const Main = () => {
     const [activities, setActivities] = useState([]);
+    const [personActivity, setPersonActivity] = useState([]);
 
     useEffect(() =>{
         fetch('activities.json')
         .then(res => res.json())
         .then(data => setActivities(data))
     },[]);
+
+    const handleAddToList = (activity) =>{
+        console.log(activity);
+        const newActivity = [...personActivity, activity];
+        setPersonActivity(newActivity);
+    }
     return (
         <div className='main'>
             {/* <div className='header-container'>

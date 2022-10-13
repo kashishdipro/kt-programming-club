@@ -3,7 +3,6 @@ import Photo from '../../images/Photo.jpg';
 import './Person.css'
 
 const Person = () => {
-    const arr = [1, 2, 3, 4, 5];
     return (
         <div className='person'>
             <div className='person-details'>
@@ -52,7 +51,7 @@ const Person = () => {
                 <div className='exercise-time'>
                     <div className='exercise-total'>
                         <h4>Exercise time</h4>
-                        <h4>0</h4>
+                        <h4> min</h4>
                     </div>
                 </div>
                 <div className='break-time'>
