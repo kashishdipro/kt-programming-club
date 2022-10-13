@@ -52,6 +52,9 @@
     border: none;
     border-radius: 1rem;
 }
+.break button:hover{
+    background-color: #7e30f2;
+}
 .exercise-container{
     margin: 0.5rem 0;
 }

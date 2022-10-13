@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Photo from '../../images/Photo.jpg';
-import './Person.css'
+import './Person.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Person = () => {
+
+const Person = ({personActivity}) => {
+    const breakTimes = [1, 2, 3, 4, 5];
+    const [userbreak, setUserBreak] = useState([]);
+    const handleUserBreak = (breakTime) =>{
+        setUserBreak(breakTime);
+    }
+    console.log(personActivity);
+    let time = 0;
+    for(const activity of personActivity){
+        time = time + activity.time;
+    }
+    // toast.configure()
+    const notify = (time, userbreak) =>{
+        toast.info('Total needed:'+ (time+userbreak) + 'min', {position: toast.POSITION.BOTTOM_CENTER});
+    }
     return (
         <div className='person'>
             <div className='person-details'>
@@ -29,21 +46,10 @@ const Person = () => {
             <div className='break-container'>
                 <h4>Add a break</h4>
                 <div className='break'>
-                    <button className='break-first'>
-                        <h6>1<small>min</small></h6>
-                    </button>
-                    <button className='break-second'>
-                        <h6>2<small>min</small></h6>
-                    </button>
-                    <button className='break-third'>
-                        <h6>3<small>min</small></h6>
-                    </button>
-                    <button className='break-forth'>
-                        <h6>4<small>min</small></h6>
-                    </button>
-                    <button className='break-fifth'>
-                        <h6>5<small>min</small></h6>
-                    </button>
+                        {
+                            breakTimes.map(breakTime =><button onClick={() => handleUserBreak(breakTime)}
+                            ><p>{breakTime}</p><small>min</small></button>)
+                        }
                 </div>
             </div>
             <div className='exercise-container'>
@@ -51,16 +57,17 @@ const Person = () => {
                 <div className='exercise-time'>
                     <div className='exercise-total'>
                         <h4>Exercise time</h4>
-                        <h4> min</h4>
+                        <h4>{time} min</h4>
                     </div>
                 </div>
                 <div className='break-time'>
                     <div className='break-total'>
                         <h4>Break time</h4>
-                        <h4>0</h4>
+                        <h4>{userbreak} min</h4>
                     </div>
                 </div>
-                <button><p className='btn-text'>Activity Completed</p></button>
+                <button onClick={() => notify(time,userbreak)}><p className='btn-text'>Activity Completed</p></button>
+                <ToastContainer />
             </div>
         </div>
     );

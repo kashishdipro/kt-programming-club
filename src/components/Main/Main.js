@@ -15,7 +15,7 @@ const Main = () => {
     },[]);
 
     const handleAddToList = (activity) =>{
-        console.log(activity);
+        // console.log(activity);
         const newActivity = [...personActivity, activity];
         setPersonActivity(newActivity);
     }
@@ -36,7 +36,7 @@ const Main = () => {
                     }
                 </div>
                 <div className='person-activity-container'>
-                    <Person></Person>
+                    <Person personActivity={personActivity}></Person>
                 </div>
             </div>
         </div>
