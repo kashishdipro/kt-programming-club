@@ -3,6 +3,7 @@ import { addToDb, getStoredExerciseList } from '../../utilities/fakedb';
 import Activity from '../Activity/Activity';
 import Header from '../Header/Header';
 import Person from '../Person/Person';
+import QandA from '../QandA/QandA';
 import './Main.css'
 
 const Main = () => {
@@ -37,21 +38,26 @@ const Main = () => {
     }
     return (
         <div className='main'>
-            <div className='header-container'>
-                <Header></Header>
-                <h3>Select today's exercise</h3>
-                <div className='activities-container'>
-                    {
-                        activities.map(activity =><Activity
-                        key={activity.id}
-                        activity={activity}
-                        handleAddToList={handleAddToList}
-                        ></Activity>)
-                    }
+            <div className='main-container'>
+                <div className='header-container'>
+                    <Header></Header>
+                    <h3>Select today's exercise</h3>
+                    <div className='activities-container'>
+                        {
+                            activities.map(activity =><Activity
+                            key={activity.id}
+                            activity={activity}
+                            handleAddToList={handleAddToList}
+                            ></Activity>)
+                        }
+                    </div>
+                </div>
+                <div className='person-activity-container'>
+                    <Person personActivity={personActivity}></Person>
                 </div>
             </div>
-            <div className='person-activity-container'>
-                <Person personActivity={personActivity}></Person>
+            <div className='QandA'>
+                <QandA></QandA>
             </div>
         </div>
     );

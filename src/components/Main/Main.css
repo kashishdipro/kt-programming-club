@@ -1,5 +1,7 @@
 .main{
     background-color: rgba(195, 220, 245, 0.3);
+}
+.main-container{
     display: grid;
     grid-template-columns: 3fr 2fr;
 }
@@ -14,6 +16,9 @@
 
 .person-activity-container{
     background-color: white;
+}
+.QandA{
+    margin: 1rem;
 }
 
 /* Mobile View */

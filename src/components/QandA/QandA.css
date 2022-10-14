@@ -1,0 +1,24 @@
+.QandA{
+    margin: 1rem;
+}
+.QandA-container{
+    margin: 1rem;
+}
+.first{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.second{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.third{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
