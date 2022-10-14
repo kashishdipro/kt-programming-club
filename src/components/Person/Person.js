@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Photo from '../../images/Photo.jpg';
 import './Person.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,10 +8,19 @@ import 'react-toastify/dist/ReactToastify.css';
 const Person = ({personActivity}) => {
     const breakTimes = [1, 2, 3, 4, 5];
     const [userbreak, setUserBreak] = useState([]);
+    
+    useEffect(() =>{
+        const storedBreakTime = localStorage.getItem('break-time');
+        const breakTime = JSON.parse(storedBreakTime);
+        setUserBreak(breakTime);
+        console.log(storedBreakTime);
+    },[])
+
     const handleUserBreak = (breakTime) =>{
         setUserBreak(breakTime);
+        localStorage.setItem('break-time', JSON.stringify(breakTime));
     }
-    console.log(personActivity);
+    // console.log(personActivity);
     let time = 0;
     for(const activity of personActivity){
         time = time + activity.time;
@@ -47,7 +56,7 @@ const Person = ({personActivity}) => {
                 <h4>Add a break</h4>
                 <div className='break'>
                         {
-                            breakTimes.map(breakTime =><button onClick={() => handleUserBreak(breakTime)}
+                            breakTimes.map(breakTime =><button key={breakTime} onClick={() => handleUserBreak(breakTime)}
                             ><p>{breakTime}</p><small>min</small></button>)
                         }
                 </div>

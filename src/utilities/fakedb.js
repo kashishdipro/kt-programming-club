@@ -11,7 +11,6 @@ const addToDb = (id, time) =>{
     // add exercise time
     const exerciseTime = exerciseList[id];
     if(exerciseTime){
-        console.log('exists!');
         const newExerciseTime = exerciseTime + time;
         exerciseList[id] = newExerciseTime;
     }else{
