@@ -3,22 +3,41 @@
 }
 .QandA-container{
     margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .first{
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
 }
 .second{
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
 }
 .third{
     background-color: white;
     border-radius: 1rem;
     padding: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
+}
+
+/* Mobile View */
+@media screen and (max-width: 688px){
+    .QandA-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Tab View */
+@media screen and (min-width: 688px) and (max-width: 992px){
+    .QandA-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
