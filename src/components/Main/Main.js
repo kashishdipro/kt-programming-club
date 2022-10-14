@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb } from '../../utilities/fakedb';
+import { addToDb, getStoredExerciseList } from '../../utilities/fakedb';
 import Activity from '../Activity/Activity';
 import Header from '../Header/Header';
 import Person from '../Person/Person';
@@ -14,6 +14,20 @@ const Main = () => {
         .then(res => res.json())
         .then(data => setActivities(data))
     },[]);
+
+    useEffect(() =>{
+        const storedExerciseList = getStoredExerciseList();
+        const savedExerciseList = [];
+        for(const id in storedExerciseList){
+            const addedExerciseList = activities.find(activity => activity.id === id)
+            if(addedExerciseList){
+                const exerciseTime = storedExerciseList[id];
+                addedExerciseList.time = exerciseTime;
+                savedExerciseList.push(addedExerciseList);
+            }
+        }
+        setPersonActivity(savedExerciseList);
+    },[activities]);
 
     const handleAddToList = (activity) =>{
         // console.log(activity);
