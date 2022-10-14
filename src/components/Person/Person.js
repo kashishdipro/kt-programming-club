@@ -18,7 +18,7 @@ const Person = ({personActivity}) => {
     }
     // toast.configure()
     const notify = (time, userbreak) =>{
-        toast.info('Total needed:'+ (time+userbreak) + 'min', {position: toast.POSITION.BOTTOM_CENTER});
+        toast.info('Your total exercise time:'+ (time+userbreak) + 'min', {position: toast.POSITION.BOTTOM_CENTER});
     }
     return (
         <div className='person'>

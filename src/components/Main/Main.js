@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { addToDb } from '../../utilities/fakedb';
 import Activity from '../Activity/Activity';
 import Header from '../Header/Header';
 import Person from '../Person/Person';
@@ -18,6 +19,7 @@ const Main = () => {
         // console.log(activity);
         const newActivity = [...personActivity, activity];
         setPersonActivity(newActivity);
+        addToDb(activity.id, activity.time);
     }
     return (
         <div className='main'>
