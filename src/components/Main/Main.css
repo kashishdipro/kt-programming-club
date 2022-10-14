@@ -23,7 +23,7 @@
 
 /* Mobile View */
 @media screen and (max-width: 688px){
-    .main{
+    .main-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -42,7 +42,7 @@
 
 /* Tab View */
 @media screen and (min-width: 688px) and (max-width: 992px){
-    .main{
+    .main-container{
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
