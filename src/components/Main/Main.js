@@ -37,11 +37,9 @@ const Main = () => {
     }
     return (
         <div className='main'>
-            {/* <div className='header-container'>
+            <div className='header-container'>
                 <Header></Header>
                 <h3>Select today's exercise</h3>
-            </div> */}
-            <div className='main-container'>
                 <div className='activities-container'>
                     {
                         activities.map(activity =><Activity
@@ -51,9 +49,9 @@ const Main = () => {
                         ></Activity>)
                     }
                 </div>
-                <div className='person-activity-container'>
-                    <Person personActivity={personActivity}></Person>
-                </div>
+            </div>
+            <div className='person-activity-container'>
+                <Person personActivity={personActivity}></Person>
             </div>
         </div>
     );

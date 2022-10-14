@@ -13,7 +13,6 @@ const Person = ({personActivity}) => {
         const storedBreakTime = localStorage.getItem('break-time');
         const breakTime = JSON.parse(storedBreakTime);
         setUserBreak(breakTime);
-        console.log(storedBreakTime);
     },[])
 
     const handleUserBreak = (breakTime) =>{

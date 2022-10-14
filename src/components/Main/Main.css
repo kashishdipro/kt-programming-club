@@ -1,16 +1,12 @@
 .main{
     background-color: rgba(195, 220, 245, 0.3);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 }
 .header-container{
-    padding: 4rem 8rem;
+    padding: 2rem 4rem;
 }
-.main-container{
-    display: grid;
-    grid-template-columns: 3.5fr 1.5fr;
-}
-
 .activities-container{
-    margin: 0 4rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -18,4 +14,39 @@
 
 .person-activity-container{
     background-color: white;
+}
+
+/* Mobile View */
+@media screen and (max-width: 688px){
+    .main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header-container{
+        padding: .5rem 1rem;
+    }
+    .activities-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5rem;
+    }
+    .person-activity-container{
+        max-width: 688px;
+    }
+}
+
+/* Tab View */
+@media screen and (min-width: 688px) and (max-width: 992px){
+    .main{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .header-container{
+        padding: 1rem 2rem;
+    }
+    .activities-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
 }
